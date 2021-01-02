@@ -30,10 +30,6 @@ const SingleProduct = (props) => {
   const { product } = props;
   const classes = useStyles();
   const [rating, setRating] = React.useState(0);
-  const updateRating = (newRating) => {
-    setRating(newRating);
-    console.log(rating);
-  };
   return (
     <Grid item md={3} xs={12}>
       <Card className={classes.card}>
@@ -55,7 +51,7 @@ const SingleProduct = (props) => {
                 value={rating}
                 precision={0.5}
                 max={5}
-                name="unique-rating"
+                name="rating"
                 onChange={(event) => setRating(event.target.value)}
               />
             </Typography>
